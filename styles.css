@@ -208,9 +208,9 @@ input:checked + span{
     .input-container button{
         margin-left: 0px;
     }
-    .input-container input{
+/*     .input-container input{
         padding: 0 100px;
-    }
+    } */
        /* .input-container input{
         margin-left: 0px;
     } */
@@ -220,7 +220,7 @@ input:checked + span{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 auto;
+/*         padding: 0 auto; */
     }
     .menu div{
         margin: 3px 0px;
