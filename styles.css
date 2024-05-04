@@ -226,6 +226,9 @@ input:checked + span{
     .menu button:nth-of-type(3), .menu button:nth-of-type(2){
         width: 25%;
     }
+    .todo{
+        margin: 10px;
+    }
 }
 
 
