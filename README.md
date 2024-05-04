@@ -33,7 +33,7 @@ The todo list application allows users to add, delete, and view tasks. It also p
 
 ### Links
 
-- Solution URL: https://github.com/vivi-uch/BLOG-PREVIEW-CARD
+- Solution URL: https://github.com/vivi-uch/TODO-LIST
 - Live Site URL:https://vivi-uch.github.io/BLOG-PREVIEW-CARD/
 
 ## My process
