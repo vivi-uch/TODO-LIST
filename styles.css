@@ -221,6 +221,7 @@ input:checked + span{
     }
     .menu div{
         margin: 3px 0px;
+        width: 70%;
     }
     .menu button:nth-of-type(3), .menu button:nth-of-type(2){
         width: 25%;
