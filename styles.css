@@ -74,7 +74,6 @@ input:checked + span{
     /* justify-content: space-between; */
     margin-bottom: 3%;
 }
-
 .input-container input{
     width: 70%;
     padding: 10px 10px 10px 20px;
@@ -209,6 +208,9 @@ input:checked + span{
     .input-container button{
         margin-left: 0px;
     }
+    .input-container input{
+        padding: 0 100px;
+    }
        /* .input-container input{
         margin-left: 0px;
     } */
@@ -218,6 +220,7 @@ input:checked + span{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 0 auto;
     }
     .menu div{
         margin: 3px 0px;
