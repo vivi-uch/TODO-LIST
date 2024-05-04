@@ -1,0 +1,68 @@
+Using local storage with JS
+
+JavaScript localStorage is a feature that allows web applications to store key-value pairs persistently in a user's web browser. It provides a simple and efficient way to save data locally on the user's device, which can be accessed and manipulated by JavaScript code running within the same origin (domain) across browser sessions.
+
+1. Storing Data:
+You can store data in localStorage using the setItem() method. Data is stored as key-value pairs, where both the key and the value must be strings.
+
+// Store data in localStorage
+localStorage.setItem('username', 'John');
+localStorage.setItem('isLoggedIn', 'true');
+
+2. Retrieving Data:
+You can retrieve data from localStorage using the getItem() method.
+
+// Retrieve data from localStorage
+const username = localStorage.getItem('username');
+const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+3. Removing Data:
+You can remove an item from localStorage using the removeItem() method.
+
+// Remove data from localStorage
+localStorage.removeItem('isLoggedIn');
+
+4. Clearing All Data:
+You can clear all data stored in localStorage using the clear() method.
+
+// Clear all data from localStorage
+localStorage.clear();
+
+5. Checking for Availability:
+You can check if localStorage is supported by the browser before using it.
+
+if (typeof Storage !== 'undefined') {
+    // localStorage is supported
+    // Proceed with localStorage operations
+} else {
+    // localStorage is not supported
+    // Handle the lack of support
+
+Important to note:
+Storage Limit: The amount of data that can be stored in localStorage varies by browser and is typically around 5-10 MB per origin. Exceeding this limit may cause a "quota exceeded" error.
+Persistence: Data stored in localStorage persists even after the browser window is closed and reopened, making it suitable for storing user preferences, session information, or cached data.
+
+Storing OBjects or Arrays.
+Data Format: Data stored in localStorage is always stored as strings. If you need to store complex data types such as objects or arrays, you can use JSON.stringify() to convert them to strings before storing, and JSON.parse() to convert them back to their original format when retrieving.
+
+// Storing and retrieving complex data (objects) in localStorage
+const user = {
+    name: 'Alice',
+    age: 30,
+    isAdmin: true
+};
+
+// Store the user object as a string in localStorage
+localStorage.setItem('user', JSON.stringify(user));
+
+// Retrieve the user object from localStorage and parse it back to its original format
+const storedUser = JSON.parse(localStorage.getItem('user'));
+console.log(storedUser.name); // Output: "Alice"
+console.log(storedUser.age); // Output: 30
+console.log(storedUser.isAdmin); // Output: true
+
+Array filter() Method:
+The .filter() method in JavaScript creates a new array with all elements 
+that pass the test implemented by the provided function. 
+It does not modify the original array but instead returns a new array containing 
+only the elements that satisfy the condition specified in the callback function.

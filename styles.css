@@ -1,0 +1,224 @@
+body{
+    background-image: url("/images/nice.jpg");
+    background-position: center;
+    background-size: cover; 
+    transition: all 0.6s ease;
+    font-family: "Raleway", sans-serif;
+    /* mix-blend-mode: multiply; */
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* greeting div-class */
+.greeting{
+    display: flex;
+    margin-top: 10%; 
+    color: var( --light-white); ;
+    font-weight: 700;  
+    font-size: 24px;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.greeting img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* light or dark theme */
+:root{
+    --light-white: #fff;
+    /* --dark-black: #000; */
+    --light-purple: #e6b7eca1;
+    /* --dark-purple: #0b000ca1; */
+    /* --dark-box-shadow: rgb(5, 5, 5)2e4a1; */
+    --light-box-shadow: #e2d2e4a1;
+}
+.dark-theme{
+    background-image: url("/images/dark2\ theme.jpg");
+}
+
+/* container div class */
+.container{
+    margin-top: 5%;
+    border: 5px solid var(--light-purple);
+    padding: 30px;
+    width: 40%;
+    /* text-align: center; */
+    background: transparent;
+    border-radius: 30px;
+}
+.container h1{
+    color: var( --light-white);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* input div container */
+/* target the checked todoName which is stored in span */
+input:checked + span{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+/* input container */
+.input-container{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-bottom: 3%;
+}
+
+.input-container input{
+    width: 70%;
+    padding: 10px 10px 10px 20px;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid  var( --light-white); ;
+    color: var( --light-white);;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.input-container button{
+    outline: none;
+    border: none;
+    background: transparent;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+/* menu */
+/* menu */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 2%;
+}
+.menu div{
+    border: 2px solid var(--light-purple);
+    border-radius: 100px;
+    padding: 5px 10px;
+    width: 25%;
+    text-align: center;
+    background-color: transparent;
+    color: var( --light-white);;
+    box-shadow: 1px 2px var(--light-box-shadow);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.menu div:Active, .menu div:hover{
+    background-color: #a290a4a1;
+}
+.menu span::before{
+    content: "(";
+}
+.menu span::after{
+    content: ")";
+}
+
+/* div todo-container */
+.todo-container{
+    height: 300px;
+    overflow: overlay;
+}
+
+/*scroll bar*/
+.todo-container::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+.todo-container img{
+    width: 100%;
+    /* height: auto; */
+    /* width: 200px;
+    height: 200px; */
+}
+.todo-container ul{
+    text-align: left;
+    color: var( --light-white);;
+    font-weight: 500;
+}
+.todo-container li{
+    margin-right: 100px;
+}
+/* from js */
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid var(--light-purple);
+    border-radius: 8px;
+    width: 90%;
+    margin: 1%;
+}
+.todo input{
+    cursor: pointer;
+    border-radius: 100px;
+    visibility: hidden;
+}
+.todo:hover{
+    background-color: #a290a4a1;
+}
+.todo span{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.todo span::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 0px;
+    border: 2px solid var(--light-purple);
+    position: absolute;
+    margin-left: -30px;
+}
+/* delete btn*/
+.delete-btn{
+    outline: none;
+    border: none;
+    background: transparent;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+/* other layouts */
+@media( max-width: 768px){
+    .container{
+        width: 92%;
+        /* border-radius: 0px; */
+        border: none;
+    }
+    .greeting{
+        margin-top: 30px; 
+    }
+    .input-container{
+        justify-content: space-between;
+    }
+    .input-container button{
+        margin-left: 0px;
+    }
+       /* .input-container input{
+        margin-left: 0px;
+    } */
+    .menu button:nth-of-type(3), .menu button:nth-of-type(2){
+        width: 25%;
+    }
+}
+
+
+
+
+
+
