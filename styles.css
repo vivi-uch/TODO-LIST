@@ -212,6 +212,16 @@ input:checked + span{
        /* .input-container input{
         margin-left: 0px;
     } */
+    .menu{
+        padding: 0px;
+        margin: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu div{
+        margin: 3px 0px;
+    }
     .menu button:nth-of-type(3), .menu button:nth-of-type(2){
         width: 25%;
     }
